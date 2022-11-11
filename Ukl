@@ -1,0 +1,25 @@
+  public static void main(String[] args) {
+        String inputan = JOptionPane.showInputDialog("masukkan Nama");
+        String[] nama = {"ridho", "yudan", "akbar"};
+        String[] kelas = {"xr4", "xr2", "xr3",};
+        String[] nisn = {"1234", "56789", "112345"};
+        String[][] kelompok = {nama, kelas, nisn};
+        int b = 0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+
+           
+                if (inputan.equalsIgnoreCase(kelompok[i][j])) {
+                    JOptionPane.showMessageDialog(null,
+                            ("nama: " + kelompok[0][j] + "\nkelas: " + kelompok[1][j] + "\nnisn: " + kelompok[2][j]));
+                    b = 1;
+
+                }
+            }
+        }
+        if (b == 0) {
+            JOptionPane.showMessageDialog(null, "data yang anda tidak ada pilihan");
+        }
+    }
+
+}
